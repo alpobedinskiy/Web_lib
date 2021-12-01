@@ -1,9 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\.venv\\Scripts",
-    "\\service\\migrations"
+    "\\new_web",
+    "\\service",
+    "\\service\\migrations",
+    "\\service\\templates"
   ],
-  "SelectedNode": "\\service",
+  "SelectedNode": "\\new_web\\settings.py",
   "PreviewInSolutionExplorer": false
 }

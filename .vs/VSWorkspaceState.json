@@ -1,11 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\.venv",
     "\\new_web",
+    "\\new_web\\__pycache__",
     "\\service",
-    "\\service\\migrations",
-    "\\service\\templates"
+    "\\web_lib"
   ],
-  "SelectedNode": "\\new_web\\settings.py",
+  "SelectedNode": "\\web_lib\\models.py",
   "PreviewInSolutionExplorer": false
 }

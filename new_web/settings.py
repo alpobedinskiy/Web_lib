@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'service.apps.ServiceConfig'
+    'service.apps.ServiceConfig',
+    'web_lib.apps.WebLibConfig'
 ]
 
 MIDDLEWARE = [
@@ -76,8 +77,12 @@ WSGI_APPLICATION = 'new_web.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'new_pr',
+        'HOST': 'localhost',
+        'USER': 'postgres',
+        'PASSWORD': '14214885p',
+        'PORT': '5432',
     }
 }
 

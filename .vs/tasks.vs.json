@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "задача-new_web",
+      "appliesTo": "new_web/",
+      "type": "launch"
+    }
+  ]
+}

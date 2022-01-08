@@ -2,6 +2,9 @@ import uuid
 from django.db import models
 from django.core import validators
 from django.contrib.auth.models import User
+from django.db.models.base import Model
+from django.db.models.deletion import SET, SET_NULL
+from django.db.models.fields.related import OneToOneField, ManyToManyField
 
 # Create your models here.
 class Author(models.Model):
@@ -52,7 +55,7 @@ class ExtUser(models.Model):
 
     desc = models.CharField(max_length = 200)
     is_logged = models.BooleanField(default = True)
-    user = models.OneToOneField(User, on_delete= models.SET_NULL, null = True)
+    user = OneToOneField(User, on_delete= models.SET_NULL, null = True)
 
 class Product(models.Model):
 
@@ -61,4 +64,4 @@ class Product(models.Model):
 class Store(models.Model):
 
     name = models.CharField(max_length = 200)
-    products = models.ManyToManyField(Product, related_name = 'stores')
+    products = ManyToManyField(Product, related_name = 'stores')

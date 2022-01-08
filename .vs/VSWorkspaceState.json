@@ -5,7 +5,9 @@
     "\\new_web",
     "\\new_web\\__pycache__",
     "\\service",
-    "\\web_lib"
+    "\\web_lib",
+    "\\web_lib\\fixtures",
+    "\\web_lib\\migrations"
   ],
   "SelectedNode": "\\web_lib\\models.py",
   "PreviewInSolutionExplorer": false

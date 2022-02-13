@@ -7,8 +7,10 @@
     "\\service",
     "\\web_lib",
     "\\web_lib\\fixtures",
+    "\\web_lib\\management",
+    "\\web_lib\\management\\commands",
     "\\web_lib\\migrations"
   ],
-  "SelectedNode": "\\web_lib\\models.py",
+  "SelectedNode": "\\web_lib\\management\\commands\\check_db.py",
   "PreviewInSolutionExplorer": false
 }

@@ -1,9 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'web_lib/css/main.css' %}">
     <title>WEB_LIB</title>
 </head>
 <body>
@@ -17,6 +19,8 @@
         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
         deserunt mollit anim id est laborum.
     </p>
+    {% url 'about' as about_url %}
+    <a href = {{ about_url }}>Show About</a>
     {% block content %}
 
     {% endblock %}

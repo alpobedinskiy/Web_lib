@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\.venv",
     "\\new_web",
-    "\\new_web\\__pycache__",
-    "\\service",
+    "\\new_web\\static",
+    "\\new_web\\static\\web",
+    "\\new_web\\static\\web\\images",
+    "\\new_web\\static\\web\\js",
     "\\web_lib",
-    "\\web_lib\\fixtures",
-    "\\web_lib\\management",
-    "\\web_lib\\management\\commands",
-    "\\web_lib\\migrations"
+    "\\web_lib\\static",
+    "\\web_lib\\templates",
+    "\\web_lib\\templates\\web_lib"
   ],
-  "SelectedNode": "\\web_lib\\management\\commands\\check_db.py",
+  "SelectedNode": "\\new_web\\settings.py",
   "PreviewInSolutionExplorer": false
 }

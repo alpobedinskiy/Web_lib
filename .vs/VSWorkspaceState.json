@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
+    "\\.venv",
     "\\new_web",
-    "\\new_web\\static",
     "\\new_web\\static\\web",
-    "\\new_web\\static\\web\\images",
     "\\new_web\\static\\web\\js",
+    "\\service",
     "\\web_lib",
     "\\web_lib\\static",
     "\\web_lib\\templates",
     "\\web_lib\\templates\\web_lib"
   ],
-  "SelectedNode": "\\new_web\\settings.py",
+  "SelectedNode": "\\web_lib\\templates\\web_lib\\main.html",
   "PreviewInSolutionExplorer": false
 }

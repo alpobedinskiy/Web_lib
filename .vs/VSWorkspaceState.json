@@ -3,14 +3,12 @@
     "",
     "\\.venv",
     "\\new_web",
-    "\\new_web\\static\\web",
-    "\\new_web\\static\\web\\js",
-    "\\service",
+    "\\root\\static",
     "\\web_lib",
-    "\\web_lib\\static",
+    "\\web_lib\\static\\web_lib",
     "\\web_lib\\templates",
     "\\web_lib\\templates\\web_lib"
   ],
-  "SelectedNode": "\\web_lib\\templates\\web_lib\\main.html",
+  "SelectedNode": "\\web_lib\\views.py",
   "PreviewInSolutionExplorer": false
 }

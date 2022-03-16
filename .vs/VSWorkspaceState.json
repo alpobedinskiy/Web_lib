@@ -1,11 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\.venv",
-    "\\new_web",
-    "\\root\\static",
+    "\\static",
+    "\\static\\web",
+    "\\static\\web\\js",
     "\\web_lib",
+    "\\web_lib\\static",
     "\\web_lib\\static\\web_lib",
+    "\\web_lib\\static\\web_lib\\images",
     "\\web_lib\\templates",
     "\\web_lib\\templates\\web_lib"
   ],

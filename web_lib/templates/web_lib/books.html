@@ -1,18 +1,24 @@
 {% extends 'web_lib/main.html' %}
 
-
 {% block content %}    
-    <div class="container">
-        <h1>Books</h1>
-        {% if books %}
-            {% for book in books %}
-                <p>{{book.title}}</p>
-                <p>{{book.description}}</p>
-                <p>{{book.published|date:'DATETIME_FORMAT'}}</p>
-                <hr>
-            {% endfor %}
-        {% else %}
-            <p>Not books</p>
-        {% endif %}
-    </div>
+   <div class="container">
+       <h1>Books</h1>
+       <div class="card card-block">           
+           <a class="btn btn-sm btn-info" href="{% url 'create_book' %}">Create book</a>
+           <a class="btn btn-sm btn-info" href="{% url 'create_book' %}">Create book</a>
+           <a class="btn btn-primary btn-sm btn-block" href="{% url 'create_book' %}">Create book</a>
+           <br />
+           {% if books %}
+           {% for book in books %}
+           <p>{{book.title}}</p>
+           <p>{{book.description}}</p>
+           <p>{{book.published|date:'DATETIME_FORMAT'}}</p>
+           <hr>
+           {% endfor %}
+           {% else %}
+           <p>Not books</p>
+           {% endif %}
+       </div>
+   </div> 
+
 {% endblock %}

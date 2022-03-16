@@ -21,7 +21,7 @@ class AuthorAdmin(admin.ModelAdmin):
 
     def info(self, obj):
         return format_html("<br>".join(obj.info()))
-    info.short_description = "Информация об авторе"
+        info.short_description = "Информация об авторе"
     
     def change_view(self, request, object_id, form_url='', extra_context=None):
         extra_context = extra_context or {}

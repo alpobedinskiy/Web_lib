@@ -11,6 +11,6 @@
     "\\web_lib\\templates",
     "\\web_lib\\templates\\web_lib"
   ],
-  "SelectedNode": "\\web_lib\\views.py",
+  "SelectedNode": "\\web_lib\\models.py",
   "PreviewInSolutionExplorer": false
 }

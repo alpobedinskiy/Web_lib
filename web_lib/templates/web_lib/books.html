@@ -1,23 +1,39 @@
-{% extends 'web_lib/main.html' %}
+﻿{% extends 'web_lib/main.html' %}
 
 {% block content %}    
    <div class="container">
        <h1>Books</h1>
        <div class="card card-block">           
-           <a class="btn btn-sm btn-info" href="{% url 'create_book' %}">Create book</a>
-           <a class="btn btn-sm btn-info" href="{% url 'create_book' %}">Create book</a>
-           <a class="btn btn-primary btn-sm btn-block" href="{% url 'create_book' %}">Create book</a>
-           <br />
-           {% if books %}
-           {% for book in books %}
-           <p>{{book.title}}</p>
-           <p>{{book.description}}</p>
-           <p>{{book.published|date:'DATETIME_FORMAT'}}</p>
-           <hr>
-           {% endfor %}
-           {% else %}
-           <p>Not books</p>
-           {% endif %}
+           <a class="btn btn-primary btn-sm btn-block" href="{% url 'create_book' %}">Создать книгу</a>
+           <br />           
+           <table class="table table-striped">
+               <thead>
+                   <tr>
+                       <th scope="col">PK</th>
+                       <th scope="col">title</th>
+                       <th scope="col">description</th>
+                       <th scope="col">published</th>
+                       <th scope="col">update</th>
+                       <th scope="col">delete</th>
+                   </tr>
+               </thead>
+               <tbody>
+                   {% if books %}
+                       {% for book in books %}
+                   <tr>
+                       <td>{{book.pk}}</td>
+                       <td>{{book.title}}</td>
+                       <td>{{book.description}}</td>
+                       <td>{{book.published|date:'DATETIME_FORMAT'}}</td>
+                       <td><a class="btn btn-sm btn-info" href="{% url 'update_book' book.pk %}">Изменить</a></td>
+                       <td><a class="btn btn-sm btn-danger" href="{% url 'delete_book'  book.pk %}">Удалить</a></td>
+                   </tr>
+                       {% endfor %}
+                   {% else %}
+                        <p>Not books</p>
+                   {% endif %}
+               </tbody>
+           </table>
        </div>
    </div> 
 

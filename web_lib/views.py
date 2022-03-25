@@ -16,14 +16,7 @@ def main(request):
      #  form_post = PostAuthor(request.POST)
      #   return render(request, 'web_lib/main.html', {"form":form, "form_post":form_post})
    
-def create_book(req):
-    book_form = BookForm()
-    return render(req, "web_lib/book_form.html", {"form":book_form})
-    if req.method == "POST":
-        book_form = BookForm(req.POST)
-        if book_form.is_valid():
-            book_form.save()
-            return redirect('books')
+
 
 def authors(request):
     if "author_uuid" in request.GET:
@@ -40,6 +33,33 @@ def authors(request):
 def books(request):
     all_books = {'books' : Book.objects.all()}
     return render(request, 'web_lib/books.html', all_books)
+
+
+def create_book(req):
+    book_form = BookForm()    
+    if req.method == "POST":
+        book_form = BookForm(req.POST)
+        if book_form.is_valid():
+            book_form.save()
+            return redirect('books')
+    return render(req, 'web_lib/book_form.html',  {"form":book_form})
+
+def update_book(req, pk):
+    book = Book.objects.get(pk=pk)
+    book_form = BookForm(instance=book)
+    if req.method == "POST":
+        book_form = BookForm(req.POST, instance=book)
+        if book_form.is_valid():
+            book_form.save()
+            return redirect('books')
+    return render(req, 'web_lib/book_form.html', {"form":book_form})
+
+def delete_book(req,pk):
+     book = Book.objects.get(pk=pk)
+     if req.method == "POST":
+         book.delete()
+         return redirect("books")
+     return render(req, 'web_lib/delete_book.html', {"book":book})    
 
 def about(request):
     return render(request, 'web_lib/about.html')
